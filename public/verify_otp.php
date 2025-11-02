@@ -59,8 +59,4 @@ $email = $_SESSION['pending_user']['email'] ?? ($_SESSION['login_user']['email']
 </body>
 </html>
 
-        <?php 
-            echo "An OTP has been sent to your email <b>" . htmlspecialchars($_SESSION['email'] ?? 'unknown') . "</b>.<br>";
-            echo "Please enter it below to continue.";
-        ?>
-
+      
