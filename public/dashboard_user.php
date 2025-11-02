@@ -3,7 +3,28 @@ if (isset($_SESSION['role']) && $_SESSION['role'] !== 'user') {
     header('Location: access_denied.php?reason=User%20Only%20Page'); exit();
 }
 ?>
-<!DOCTYPE html><html><head><meta charset='utf-8'><title>User Dashboard</title><link rel="stylesheet" href="../assets/css/style.css"></head><body>
+<!DOCTYPE html><html><head><meta charset='utf-8'><title>User Dashboard</title><link rel="stylesheet" href="../assets/css/style.css">
+
+<style>
+
+  body{
+    background-color: white;
+  }
+
+div{
+  background-color: #eaf5ff;
+  border-radius: 30px 0px;
+  align-content: center;
+  justify-items: center;
+  justify-self: center;
+  margin: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+</style>
+
+</head><body>
 <div class="container">
   <h1>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?> (User)</h1>
   <div class="card">
@@ -26,7 +47,9 @@ if (isset($_SESSION['role']) && $_SESSION['role'] !== 'user') {
       <button type="submit">Report Account Compromised</button>
     </form>
   </div>
-  <a href="logout.php">Logout</a>
+ <div class="logout-link">
+   <a href="logout.php">Logout</a>
+</div>
 </div>
 <script src="../assets/js/popup.js"></script>
 <script>
