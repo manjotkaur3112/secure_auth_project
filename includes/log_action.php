@@ -79,3 +79,15 @@ if (!function_exists('log_action')) {
     }
 }
 ?>
+
+<?php
+function logAction($conn, $user_id, $action, $description) {
+    $stmt = $conn->prepare("INSERT INTO audit_logs (user_id, event, details, created_at) VALUES (?, ?, ?, NOW())");
+    $stmt->bind_param("iss", $user_id, $action, $description);
+    $stmt->execute();
+    $stmt->close();
+}
+?>
+
+
+
