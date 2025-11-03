@@ -1,7 +1,6 @@
 <?php
 include_once '../config/db.php';
 include_once '../includes/log_action.php';
-session_start();
 
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
     header('Location: ../public/access_denied.php');
