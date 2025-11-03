@@ -32,7 +32,7 @@ if (!isset($_SESSION['otp_verified']) || $_SESSION['otp_verified'] !== true || !
     transition: color 0.3s ease;
     position: absolute;
     top: 50px;
-    right: 680px;
+    right: 490px;
 }
 
     form {

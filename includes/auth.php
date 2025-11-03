@@ -218,7 +218,7 @@ if (isset($_POST['verify_reset_otp'])) {
         unset($_SESSION['otp'], $_SESSION['otp_expiry']);
 
         // OTP valid — allow user to reset password
-        header("Location: ../public/reset_password.php");
+        header("Location: ../public/reset_form.php");
         exit();
     } else {
         echo "<script>alert('Invalid OTP. Try again.'); window.location.href='../public/verify_otp.php?type=reset';</script>";

@@ -1,7 +1,7 @@
 <?php
 include_once '../config/db.php';
 include_once '../includes/log_action.php';
-session_start();
+// session_start();
 
 // Simple admin check
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
